@@ -1,0 +1,11 @@
+package com.autoinfra;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AutoInfraApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(AutoInfraApplication.class, args);
+    }
+}
