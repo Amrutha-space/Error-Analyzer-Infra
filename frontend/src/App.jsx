@@ -1,6 +1,9 @@
 import { useState } from 'react'
 
 function App() {
+
+  const API_URL = "https://error-analyzer-infra.onrender.com/api/analyze";
+
   const [logText, setLogText] = useState('')
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState(null)
@@ -19,7 +22,7 @@ function App() {
     setResponse(null)
 
     try {
-      const res = await fetch('http://localhost:8080/api/analyze', {
+      const res = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
