@@ -37,7 +37,7 @@ function App() {
       const data = await res.json()
       setResponse(data)
     } catch (err) {
-      setError('Failed to connect to backend. Make sure the Spring Boot server is running on localhost:8080')
+      setError('Failed to connect to analysis server. Please try again later.')
       console.error('Error:', err)
     } finally {
       setLoading(false)
