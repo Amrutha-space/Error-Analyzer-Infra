@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const API_URL = "https://error-analyzer-infra.onrender.com/api/analyze";
+  const API_URL = "http://localhost:8080/api/analyze" ;// Change this to your backend API endpoint;
 
   const [logText, setLogText] = useState('')
   const [loading, setLoading] = useState(false)
@@ -40,6 +40,9 @@ try {
 } catch (err) {
   setError('Failed to connect to analysis server. Please try again later.')
   console.error('Error:', err)
+} finally {
+  setLoading(false)
+}
 }
 
   const sampleLogs = [
@@ -420,7 +423,6 @@ Example: java.lang.NullPointerException at com.example.MyClass.method"
       </footer>
     </div>
   )
-}
 }
 
 export default App
