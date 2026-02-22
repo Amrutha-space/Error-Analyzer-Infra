@@ -28,18 +28,18 @@ try {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ log: logText }),
-  });
+  })
 
   if (!res.ok) {
-    throw new Error(`HTTP error! status: ${res.status}`);
+    throw new Error(`HTTP error! status: ${res.status}`)
   }
 
-  const data = await res.json();
-  setResponse(data);
+  const data = await res.json()
+  setResponse(data)
 
 } catch (err) {
-  setError('Failed to connect to analysis server. Please try again later.');
-  console.error('Error:', err);
+  setError('Failed to connect to analysis server. Please try again later.')
+  console.error('Error:', err)
 }
 
   const sampleLogs = [
@@ -420,6 +420,7 @@ Example: java.lang.NullPointerException at com.example.MyClass.method"
       </footer>
     </div>
   )
+}
 }
 
 export default App

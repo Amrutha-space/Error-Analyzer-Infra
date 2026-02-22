@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "https://error-analyzer-infra-1.onrender.com")
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class AnalysisController {
     
