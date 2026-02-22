@@ -6,8 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:3000")
 public class AnalysisController {
     
     @Autowired
