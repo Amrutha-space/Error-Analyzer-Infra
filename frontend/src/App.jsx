@@ -21,28 +21,26 @@ function App() {
     setError('')
     setResponse(null)
 
-    try {
-      const res = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ log: logText }),
-      })
+try {
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ log: logText }),
+  });
 
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`)
-      }
-
-      const data = await res.json()
-      setResponse(data)
-    } catch (err) {
-      setError('Failed to connect to analysis server. Please try again later.')
-      console.error('Error:', err)
-    } finally {
-      setLoading(false)
-    }
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
   }
+
+  const data = await res.json();
+  setResponse(data);
+
+} catch (err) {
+  setError('Failed to connect to analysis server. Please try again later.');
+  console.error('Error:', err);
+}
 
   const sampleLogs = [
     {
