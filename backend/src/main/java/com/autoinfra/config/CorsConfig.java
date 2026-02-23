@@ -13,11 +13,14 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-
-                registry.addMapping("/**")   // ← IMPORTANT (not /api/**)
-                        .allowedOrigins("*")
+                registry.addMapping("/**")     // IMPORTANT
+                        .allowedOrigins(
+                                "https://error-analyzer-infra.vercel.app",
+                                "http://localhost:3000"
+                        )
                         .allowedMethods("*")
-                        .allowedHeaders("*");
+                        .allowedHeaders("*")
+                        .allowCredentials(false);
             }
         };
     }
