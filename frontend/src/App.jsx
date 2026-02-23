@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const API_URL = "http://localhost:8080/api/analyze" ;// Change this to your backend API endpoint;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [logText, setLogText] = useState('')
   const [loading, setLoading] = useState(false)
