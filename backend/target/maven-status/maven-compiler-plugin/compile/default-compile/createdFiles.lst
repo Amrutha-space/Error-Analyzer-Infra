@@ -2,5 +2,7 @@ com/autoinfra/controller/AnalysisController.class
 com/autoinfra/service/AnalysisService$AnalysisResult.class
 com/autoinfra/AutoInfraApplication.class
 com/autoinfra/controller/AnalysisController$AnalysisResponse.class
+com/autoinfra/config/CorsConfig.class
+com/autoinfra/config/CorsConfig$1.class
 com/autoinfra/controller/AnalysisController$AnalysisRequest.class
 com/autoinfra/service/AnalysisService.class
