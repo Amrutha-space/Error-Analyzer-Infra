@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = "https://error-analyzer-infra.onrender.com/api/analyze";
 
   const [logText, setLogText] = useState('')
   const [loading, setLoading] = useState(false)
